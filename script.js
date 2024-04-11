@@ -21,7 +21,7 @@ function main() {
     });
     ele.appendChild(help);
     help = document.createElement("button");
-    help.innerText = "Edytuj";
+    help.innerText = "Edit";
     help.addEventListener("click", function () {
         document
             .querySelectorAll("article button, label *")
