@@ -1,21 +1,21 @@
 function main() {
-    inp.placeholder = "Wpisz treść";
+    inp.placeholder = "Enter content";
     inp.classList.remove("error");
     const ele = document.createElement("div");
     let help = document.createElement("p");
     if (inp.value) (help.innerText = inp.value), (inp.value = "");
     else {
-        inp.placeholder = "Podaj poprawne dane!";
+        inp.placeholder = "Enter correct data!";
         inp.classList.add("error");
         setTimeout(function () {
-            inp.placeholder = "Wpisz treść";
+            inp.placeholder = "Enter content";
             inp.classList.remove("error");
         }, 2000);
         return;
     }
     ele.appendChild(help);
     help = document.createElement("button");
-    help.innerText = "Usuń";
+    help.innerText = "Delete";
     help.addEventListener("click", function () {
         ele.remove();
     });
@@ -32,15 +32,15 @@ function main() {
         edtInp.focus();
 
         function handleEdit() {
-            edtInp.placeholder = "Wpisz treść";
+            edtInp.placeholder = "Enter content";
             edtInp.classList.remove("error");
             if (edtInp.value) {
                 ele.querySelector("p").innerText = edtInp.value;
             } else {
-                edtInp.placeholder = "Podaj poprawne dane!";
+                edtInp.placeholder = "Enter correct data!";
                 edtInp.classList.add("error");
                 setTimeout(function () {
-                    edtInp.placeholder = "Wpisz treść";
+                    edtInp.placeholder = "Enter content";
                     edtInp.classList.remove("error");
                 }, 2000);
                 return;
